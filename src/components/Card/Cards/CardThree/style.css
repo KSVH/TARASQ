@@ -1,0 +1,22 @@
+.clipath {
+    clip-path: polygon(15% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+@media screen and (max-width: 1023px) {
+  .clipath {
+     display: none;
+    }
+  }
+
+/* Styles pour l'effet de grossissement sur la div entière */
+
+  .hover-zoom-icon {
+    transform: scale(1.0); /* Ajustez la valeur pour le niveau de grossissement souhaité */
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+  }
+  
+  /* Styles pour l'effet de grossissement sur l'icône uniquement */
+  .hover-zoom-icon-container:hover .hover-zoom-icon {
+    transform: scale(1.2); /* Ajustez la valeur pour le niveau de grossissement souhaité */
+    transition: transform 0.3s ease; /* Ajoute une transition fluide */
+  }

@@ -4,7 +4,7 @@ import icon from '../../images/icon.png';
 export default function Footer() {
   return (
     <div className='bg-slate-800'>
-      <div class="container mx-auto px-4">
+      <div class="container mx-auto px-4 pt-5">
         <div class="grid grid-cols-2 gap-4 mb-10">
           <div className='flex items-center'>
             <img src={icon} className="w-10 h-10" />

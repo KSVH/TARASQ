@@ -1,0 +1,8 @@
+.smooth-transition {
+    transition: opacity 0.8s ease;
+    opacity: 1;
+  }
+  
+  .smooth-transition.hide {
+    opacity: 0;
+  }
