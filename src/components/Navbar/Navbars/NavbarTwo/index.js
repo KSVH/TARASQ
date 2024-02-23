@@ -34,8 +34,6 @@ export default function NavbarTwo() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
-
-  console.log(isScrolled, "info pls")
   return (
     <Disclosure as="nav" className={classNames("fixed z-10 width-nav px-2 transition-all duration-300", isScrolled ? "bg-white shadow-lg" : "")}>
       {({ open }) => (

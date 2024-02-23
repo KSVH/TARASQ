@@ -1,7 +1,19 @@
 import React from 'react';
 import { StaticImage } from 'gatsby-plugin-image';
 
-export default function CardTwo() {
+export default function CardTwo(props) {
+
+  function couperTexte(texte, longueurMax) {
+    if (texte.length <= longueurMax) {
+      return texte;
+    }
+
+    const texteCoupe = texte.substring(0, longueurMax) + '...';
+    return texteCoupe;
+  }
+
+  const texteCoupe = couperTexte(props.data.description.description, 40);
+
   return (
     <div className="max-w-sm w-full lg:max-w-full lg:flex shadow-2xl">
       <div className="h-64 lg:h-full w-full cursor-pointer bg-cover">
@@ -21,8 +33,8 @@ export default function CardTwo() {
             </svg>
             Members only
           </p>
-          <h2 className="text-blue-700 font-bold text-xl mb-2">Can coffee make you a better developer?</h2>
-          <p className="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+          <h2 className="text-blue-700 font-bold text-xl mb-2">{props.data.titre}</h2>
+          <p className="text-gray-700 text-base">{texteCoupe}</p>
         </div>
         <div className="flex items-center">
           <StaticImage
@@ -35,7 +47,7 @@ export default function CardTwo() {
             style={{ borderRadius: '100%', marginRight: "10px" }}
           />
           <div className="text-sm">
-            <p className="text-blue-700 leading-none font-semibold">Jonathan Reinink</p>
+            <p className="text-blue-700 leading-none font-semibold">{props.data.auteur}</p>
             <p className="text-gray-400 italic">10 Février 1934</p>
           </div>
         </div>

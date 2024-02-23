@@ -7,7 +7,8 @@ import Card from "../components/Card";
 import Banner from "../components/Banner";
 import Faq from "../components/Faq";
 
-export default function Accueil() {
+export default function Accueil({ data }) {
+  console.log(data, "data accueil post")
   return (
     <>
       <Banner />
@@ -19,3 +20,18 @@ export default function Accueil() {
     </>
   )
 }
+
+export const query = graphql`
+  query {
+    allContentfulPost {
+      nodes {
+        id
+        auteur
+        description {
+          description
+        }
+        titre
+      }
+    }
+  }
+`;
