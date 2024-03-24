@@ -4,7 +4,7 @@ import { graphql } from "gatsby"
 const Page = ({ data }) => {
   console.log(data, "genre j'ai un truc dans le blog ?")
   return (
-    <p>404 ici askip</p>
+    <p>ici ça fonctionne xd</p>
   )
 }
 

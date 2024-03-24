@@ -1,37 +1,50 @@
 import * as React from "react";
-import "../styles/global.css"
-import NavbarCustom from "../components/Navbar";
-import Footer from "../components/Footer";
+import { graphql } from "gatsby"; // Import de graphql
+import "../styles/global.css";
 import Carousel from "../components/Caroussel";
+import HeaderOne from '../components/Header/Headers/headerOne'
 import Card from "../components/Card";
 import Banner from "../components/Banner";
 import Faq from "../components/Faq";
+import Layout from "../components/layout";
+import Logo from "../components/Logo";
+import About from "../components/About";
 
 export default function Accueil({ data }) {
-  console.log(data, "data accueil post")
+  // Utilisation des données récupérées
+  const posts = data.allContentfulPost.nodes;
+
+  console.log(posts)
+
   return (
     <>
-      <Banner />
-      <NavbarCustom />
-      <Carousel />
-      <Card />
-      <Faq />
-      <Footer />
+      <Layout>
+        <Banner />
+        <HeaderOne />
+        {/* <Carousel /> */}
+        <Card data={data} />
+        <About />
+        <Faq />
+      </Layout>
     </>
   )
 }
 
+// Définition de la requête GraphQL
 export const query = graphql`
   query {
     allContentfulPost {
       nodes {
-        id
         auteur
         description {
           description
         }
         titre
+        media {
+          description
+          gatsbyImageData(width: 200)
+        }
       }
     }
   }
-`;
+`

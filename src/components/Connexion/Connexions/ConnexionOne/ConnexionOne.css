@@ -1,0 +1,4 @@
+.h-screen-minus-navbar {
+    height: calc(100vh - 64px); /* Déduire 64px de la hauteur de l'écran */
+    overflow: hidden; /* Pour s'assurer que l'image ne dépasse pas du conteneur si elle est plus grande */
+  }
