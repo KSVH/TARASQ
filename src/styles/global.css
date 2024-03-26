@@ -6,6 +6,41 @@
   background-color: rgba(244, 244, 244, 1);
 }
 
+#sky {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#shootingstars {
+  margin: 0;
+  padding: 0;
+  width: 150vh;
+  height: 100vw;
+  position: fixed;
+  overflow: hidden;
+  transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%))
+    rotate(120deg);
+}
+
+.wish {
+  height: 2px;
+  top: 300px;
+  width: 100px;
+  margin: 0;
+  opacity: 0;
+  padding: 0;
+  background-color: white;
+  position: absolute;
+  background: linear-gradient(-45deg, white, rgba(0, 0, 255, 0));
+  filter: drop-shadow(0 0 6px white);
+  overflow: hidden;
+}
+
+
 .video {
     width: 100%;
     height: 100vh;
@@ -13,6 +48,14 @@
     object-fit: cover;
     top: 0px;
     left: 50%;
+}
+
+.font-serif {
+  font-family: 'Nerko one', sans-serif;
+}
+
+.font-mono {
+  font-family: 'Salsa', sans-serif;
 }
 
 .b {
@@ -27,8 +70,12 @@ p,h5,span {
   font-family: 'Roboto', sans-serif;
 }
 
-h1,h2,h3,h4 {
-  font-family: 'Montserrat', sans-serif;
+h1,h2 {
+  font-family: 'Oi', sans-serif;
+}
+
+p,span {
+  font-family: 'Nerko one', sans-serif;
 }
 
 @layer base {

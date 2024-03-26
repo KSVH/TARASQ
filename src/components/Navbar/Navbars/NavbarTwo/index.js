@@ -6,10 +6,9 @@ import './style.css';
 import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 const navigation = [
-  { name: 'Accueil', href: '#', current: true },
-  { name: 'Nos projets', href: '#', current: false },
-  { name: 'Nos produits', href: '#', current: false },
-  { name: 'Informations', href: '#', current: false },
+  { name: 'Articles', href: '#', current: false },
+  { name: 'Works', href: '#', current: false },
+  { name: 'About', href: '#', current: false },
 ]
 
 function classNames(...classes) {
@@ -40,8 +39,31 @@ export default function NavbarTwo() {
         <>
           <div className="container mx-auto">
             <div className="relative flex h-16 items-center justify-between">
-              <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-                {/* Mobile menu button*/}
+              <div className="flex items-center">
+                {/* Logo */}
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-8 w-auto"
+                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                    alt="Your Company"
+                  />
+                </div>
+              </div>
+              {/* Navigation */}
+              <div className="hidden sm:flex items-center justify-end space-x-4">
+                {navigation.map((item) => (
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    className={classNames("text-white font-serif text-xl", isScrolled ? "text-black" : "")}
+                    aria-current={item.current ? 'page' : undefined}
+                  >
+                    {item.name}
+                  </a>
+                ))}
+              </div>
+              {/* Bouton du menu mobile */}
+              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:hidden">
                 <Disclosure.Button className="relative inline-flex items-center justify-center rounded-md p-2 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white">
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
@@ -52,90 +74,9 @@ export default function NavbarTwo() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex flex-shrink-0 items-center">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
-                <div className="hidden sm:ml-6 sm:block">
-                  <div className="flex space-x-4">
-                    {navigation.map((item) => (
-                      <a
-                        key={item.name}
-                        href={item.href}
-                        className={classNames("text-white", isScrolled ? "text-black" : "")}
-                        aria-current={item.current ? 'page' : undefined}
-                      >
-                        {item.name}
-                      </a>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-                {/* Profile dropdown */}
-                <Menu as="div" className="relative ml-3">
-                  <div>
-                    {/* <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                      <span className="absolute -inset-1.5" />
-                      <span className="sr-only">Open user menu</span>
-                      <img
-                        className="h-8 w-8 rounded-full"
-                        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                        alt=""
-                      />
-                    </Menu.Button> */}
-                    <h3 className={classNames("text-base cursor-pointer", isScrolled ? "text-black" : "text-white")}>Sign out</h3>
-                  </div>
-                  <Transition
-                    as={Fragment}
-                    enter="transition ease-out duration-100"
-                    enterFrom="transform opacity-0 scale-95"
-                    enterTo="transform opacity-100 scale-100"
-                    leave="transition ease-in duration-75"
-                    leaveFrom="transform opacity-100 scale-100"
-                    leaveTo="transform opacity-0 scale-95"
-                  >
-                    <Menu.Items className="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Your Profile
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Settings
-                          </a>
-                        )}
-                      </Menu.Item>
-                      <Menu.Item>
-                        {({ active }) => (
-                          <a
-                            href="#"
-                            className={classNames(active ? 'bg-gray-100' : '', 'block px-4 py-2 text-sm text-gray-700')}
-                          >
-                            Sign out
-                          </a>
-                        )}
-                      </Menu.Item>
-                    </Menu.Items>
-                  </Transition>
-                </Menu>
-              </div>
             </div>
           </div>
+
 
           <Disclosure.Panel className="sm:hidden">
             <div className="space-y-1 px-2 pb-3 pt-2">

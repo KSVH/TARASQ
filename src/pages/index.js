@@ -11,6 +11,7 @@ import Logo from "../components/Logo";
 import About from "../components/About";
 import Company from "../components/Company";
 import Technology from "../components/Technology/technology";
+import HeaderTwo from "../components/Header/Headers/HeaderTwo";
 
 export default function Accueil({ data }) {
   // Utilisation des données récupérées
@@ -22,7 +23,7 @@ export default function Accueil({ data }) {
     <>
       <Layout>
         <Banner />
-        <HeaderOne />
+        <HeaderTwo />
         {/* <Carousel /> */}
         <Card data={data} />
         <Technology />
