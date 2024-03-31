@@ -1,17 +1,13 @@
 import * as React from "react";
 import { graphql } from "gatsby"; // Import de graphql
 import "../styles/global.css";
-import Carousel from "../components/Caroussel";
-import HeaderOne from "../components/Header/Headers/headerOne";
 import Card from "../components/Card";
-import Banner from "../components/Banner";
-import Faq from "../components/Faq";
 import Layout from "../components/layout";
-import Logo from "../components/Logo";
 import About from "../components/About";
-import Company from "../components/Company";
+import Articles from "../components/articles";
 import Technology from "../components/Technology/technology";
 import HeaderTwo from "../components/Header/Headers/HeaderTwo";
+import '../styles/animate.css';
 
 export default function Accueil({ data }) {
   // Utilisation des données récupérées
@@ -22,13 +18,13 @@ export default function Accueil({ data }) {
   return (
     <>
       <Layout>
-        <Banner />
+        {/* <Banner /> */}
         <HeaderTwo />
         {/* <Carousel /> */}
         <Card data={data} />
+        <Articles />
         <Technology />
         <About />
-        <Company />
       </Layout>
     </>
   );
