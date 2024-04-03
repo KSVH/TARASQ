@@ -1,0 +1,28 @@
+.font-bold.text-paragraph {
+  position: relative;
+}
+
+.font-bold.text-paragraph::before {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  color: transparent;
+  transition: all 0.5s ease;
+}
+
+.font-bold.text-paragraph:hover::before {
+  color: transparent;
+  animation: animateText 5s linear infinite alternate;
+}
+
+@keyframes animateText {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  100% {
+    filter: hue-rotate(360deg);
+  }
+}

@@ -1,18 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './style.css';
-import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from "react";
+import { Fragment } from "react";
+import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import "./style.css";
+import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const navigation = [
-  { name: 'Articles', href: '#', current: false },
-  { name: 'Works', href: '#', current: false },
-  { name: 'About', href: '#', current: false },
-]
+  { name: "Articles", href: "#", current: false },
+  { name: "Works", href: "#", current: false },
+  { name: "About", href: "#", current: false },
+];
 
 function classNames(...classes) {
-  return classes.filter(Boolean).join(' ')
+  return classes.filter(Boolean).join(" ");
 }
 
 export default function NavbarTwo() {
@@ -26,15 +26,21 @@ export default function NavbarTwo() {
     };
 
     // Ajoutez un écouteur d'événements de défilement à la fenêtre
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Retirez l'écouteur d'événements lors du nettoyage du composant
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
   return (
-    <Disclosure as="nav" className={classNames("fixed z-10 width-nav px-2 transition-all duration-300", isScrolled ? "bg-white shadow-lg" : "")}>
+    <Disclosure
+      as="nav"
+      className={classNames(
+        "fixed z-10 width-nav px-2 transition-all duration-300",
+        isScrolled ? "bg-background-pink shadow-lg" : ""
+      )}
+    >
       {({ open }) => (
         <>
           <div className="container mx-auto">
@@ -56,7 +62,7 @@ export default function NavbarTwo() {
                     key={item.name}
                     href={item.href}
                     className={classNames("text-white font-serif text-xl", isScrolled ? "text-black" : "")}
-                    aria-current={item.current ? 'page' : undefined}
+                    aria-current={item.current ? "page" : undefined}
                   >
                     {item.name}
                   </a>
@@ -68,15 +74,22 @@ export default function NavbarTwo() {
                   <span className="absolute -inset-0.5 text-white" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <FontAwesomeIcon icon={faXmark} className={classNames("block h-6 w-6", isScrolled ? "text-secondary" : "text-white")} aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faXmark}
+                      className={classNames("block h-6 w-6", isScrolled ? "text-secondary" : "text-white")}
+                      aria-hidden="true"
+                    />
                   ) : (
-                    <FontAwesomeIcon icon={faBars} className={classNames("block h-6 w-6", isScrolled ? "text-secondary" : "text-white")} aria-hidden="true" />
+                    <FontAwesomeIcon
+                      icon={faBars}
+                      className={classNames("block h-6 w-6", isScrolled ? "text-secondary" : "text-white")}
+                      aria-hidden="true"
+                    />
                   )}
                 </Disclosure.Button>
               </div>
             </div>
           </div>
-
 
           <Disclosure.Panel className="sm:hidden z-20">
             <div className="space-y-1 px-2 pb-3 pt-2">
@@ -86,10 +99,12 @@ export default function NavbarTwo() {
                   as="a"
                   href={item.href}
                   className={classNames(
-                    item.current ? 'bg-gray-900 text-white' : 'text-white hover:bg-background-pink hover:text-white bg-secondary',
-                    'block rounded-md px-3 py-2 text-base font-medium'
+                    item.current
+                      ? "bg-gray-900 text-white"
+                      : "text-white hover:bg-background-pink hover:text-white bg-secondary",
+                    "block rounded-md px-3 py-2 text-base font-medium"
                   )}
-                  aria-current={item.current ? '' : undefined}
+                  aria-current={item.current ? "" : undefined}
                 >
                   {item.name}
                 </Disclosure.Button>
@@ -99,5 +114,5 @@ export default function NavbarTwo() {
         </>
       )}
     </Disclosure>
-  )
+  );
 }

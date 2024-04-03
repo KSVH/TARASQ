@@ -1,16 +1,16 @@
-import React, { useState } from 'react';
-import { GatsbyImage, getImage } from 'gatsby-plugin-image';
+import React, { useState } from "react";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 export default function Cardfive({ data }) {
   const [isHovered, setIsHovered] = useState(false);
 
-  // FUNCTION FOR CUTTING THE TEXT 
+  // FUNCTION FOR CUTTING THE TEXT
   function couperTexte(texte, longueurMax) {
     if (texte.length <= longueurMax) {
       return texte;
     }
 
-    const texteCoupe = texte.substring(0, longueurMax) + '...';
+    const texteCoupe = texte.substring(0, longueurMax) + "...";
     return texteCoupe;
   }
 
@@ -20,16 +20,18 @@ export default function Cardfive({ data }) {
   const image = getImage(data.media);
 
   return (
-    <div className={`relative rounded-lg overflow-hidden shadow-lg  bg-white animate__animated_slow animate__flipInY animate__infinite_slow`}
+    <div
+      className={`relative rounded-lg overflow-hidden shadow-lg bg-white animate__animated_slow animate__flipInY animate__infinite_slow`}
       onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}>
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="w-full cursor-pointer h-[450px]">
         <GatsbyImage
           image={image}
           alt="toto"
           placeholder="blurred"
           layout="constrained"
-          style={{ width: '100%', height: '100%' }}
+          style={{ width: "100%", height: "100%" }}
         />
       </div>
       {isHovered && (

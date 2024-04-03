@@ -4,10 +4,10 @@ import "../styles/global.css";
 import Card from "../components/Card";
 import Layout from "../components/layout";
 import About from "../components/About";
-import Articles from "../components/articles";
+import Company from "../components/Work";
 import Technology from "../components/Technology/technology";
 import HeaderTwo from "../components/Header/Headers/HeaderTwo";
-import '../styles/animate.css';
+import "../styles/animate.css";
 
 export default function Accueil({ data }) {
   // Utilisation des données récupérées
@@ -22,7 +22,7 @@ export default function Accueil({ data }) {
         <HeaderTwo />
         {/* <Carousel /> */}
         <Card data={data} />
-        <Articles />
+        <Company />
         <Technology />
         <About />
       </Layout>
