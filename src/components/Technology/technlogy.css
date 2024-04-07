@@ -1,12 +1,39 @@
-@keyframes rotate360 {
-  0% {
-    transform: rotate(0deg);
+.technology-column {
+  transition: transform 2s ease-in-out;
+}
+
+.move-up-down-animation {
+  animation: moveUpDown 4s infinite alternate;
+}
+
+@keyframes moveUpDown {
+  0%, 100% {
+    transform: translateY(0);
   }
-  100% {
-    transform: rotate(360deg);
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-.rotate-10s {
-  animation: rotate360 10s linear infinite;
+.move-down-up-animation {
+  animation: moveDownUp 4s infinite alternate;
+}
+
+@media screen and (max-width: 1316px) {
+  .move-down-up-animation {
+    animation: none;
+  }
+
+  .move-up-down-animation {
+    animation: none;
+  }
+}
+
+@keyframes moveDownUp {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
 }

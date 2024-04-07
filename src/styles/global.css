@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  background-color: rgba(244, 244, 244, 1);
+  background-color: #EDEDED;
 }
 
 #sky {

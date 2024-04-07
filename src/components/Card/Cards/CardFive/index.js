@@ -21,7 +21,7 @@ export default function Cardfive({ data }) {
 
   return (
     <div
-      className={`relative rounded-lg overflow-hidden shadow-lg bg-white animate__animated_slow animate__flipInY animate__infinite_slow`}
+      className={`relative rounded-[65px] overflow-hidden shadow-lg bg-white animate__animated_slow animate__flipInY animate__infinite_slow`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -36,7 +36,7 @@ export default function Cardfive({ data }) {
       </div>
       {isHovered && (
         <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
-          <p className="text-white text-center">Your overlay content here</p>
+          <p className="text-white text-center">Bientôt disponible</p>
         </div>
       )}
     </div>

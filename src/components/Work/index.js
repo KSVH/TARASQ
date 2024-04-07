@@ -27,7 +27,7 @@ export default function Company() {
         </div>
 
         <AnimatedElement animationClass="animate__fadeIn">
-          <h2 className="text-7xl font-medium text-secondary text-center py-20">
+          <h2 className="lg:text-7xl font-medium text-secondary text-center py-20 md:text-5xl text-4xl">
             I have work for them
           </h2>
         </AnimatedElement>
@@ -44,7 +44,7 @@ export default function Company() {
               </p>
             </AnimatedElement>
           </div>
-          <AnimatedElement animationClass="animate__fadeInUp">
+          <AnimatedElement animationClass="animate__fadeIn">
             <div className="w-full bg-gradient-to-tr from-[#D5BCFF] to-[#FF8EAF] h-[250px] rounded-xl flex justify-center items-center">
               <div className="w-[230px] h-[64px]">
                 <StaticImage
@@ -70,7 +70,7 @@ export default function Company() {
               enrichir mon expérience en tant que développeuse front-end.
             </p>
           </div>
-          <AnimatedElement animationClass="animate__fadeInUp">
+          <AnimatedElement animationClass="animate__fadeIn">
             <div className="w-full bg-gradient-to-t from-[#FF9AB7] to-[#E7D9FF] h-[250px] rounded-xl flex justify-center items-center">
               <div className="w-[155px] h-[140px]">
                 <StaticImage
@@ -85,7 +85,7 @@ export default function Company() {
           </AnimatedElement>
 
           <AnimatedElement animationClass="animate__slideInRight">
-            <div className="flex justify-center flex-col items-end sm:hidden md:flex">
+            <div className="justify-center flex-col items-end hidden md:flex">
               <h3 className="text-3xl font-bold text-paragraph font-mono">Bazam</h3>
               <h4 className="text-secondary text-md italic pb-5 font-serif">2020-2021</h4>
               <p className="text-paragraph italic font-mono text-right">
@@ -108,7 +108,7 @@ export default function Company() {
               </p>
             </AnimatedElement>
           </div>
-          <AnimatedElement animationClass="animate__fadeInUp">
+          <AnimatedElement animationClass="animate__fadeIn">
             <div className="w-full bg-gradient-to-br from-[#FF8EAF] to-[#D5BCFF] h-[250px] rounded-xl flex justify-center items-center">
               <div className="w-[220px] h-[140px]">
                 <StaticImage
