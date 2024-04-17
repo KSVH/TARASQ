@@ -21,6 +21,12 @@ const StarrySky = () => {
   const [vh, setVh] = useState(Math.max(1000 || 0));
 
   useEffect(() => {
+    // Vérifie si document est disponible avant d'accéder à ses propriétés
+    if (typeof document !== 'undefined') {
+      setVw(Math.max(document.documentElement.clientWidth, window.innerWidth || 0));
+      setVh(Math.max(document.documentElement.clientHeight, window.innerHeight || 0));
+    }
+
     const starryNight = () => {
       anime({
         targets: ["#sky .star"],
