@@ -27,7 +27,7 @@ export default function Company() {
         </div>
 
         <AnimatedElement animationClass="animate__fadeIn">
-          <h2 className="lg:text-7xl font-medium text-secondary text-center py-20 md:text-5xl text-4xl">
+          <h2 className="lg:text-7xl font-medium text-secondary text-center py-20 md:text-5xl text-4xl" id="works">
             I have work for them
           </h2>
         </AnimatedElement>

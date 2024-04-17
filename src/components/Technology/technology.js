@@ -26,7 +26,7 @@ export default function Technology() {
       </div>
 
       <AnimatedElement animationClass="animate__fadeIn">
-        <h2 className="lg:text-7xl font-medium text-secondary text-center pt-10 md:py-20 md:text-5xl text-4xl">
+        <h2 className="lg:text-7xl font-medium text-secondary text-center pt-10 md:py-20 md:text-5xl text-4xl" id='tools'>
           The tools I use
         </h2>
       </AnimatedElement>

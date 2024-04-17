@@ -4,11 +4,13 @@ import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./style.css";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { StaticImage } from "gatsby-plugin-image";
 
 const navigation = [
-  { name: "Articles", href: "#", current: false },
-  { name: "Works", href: "#", current: false },
-  { name: "About", href: "#", current: false },
+  { name: "Articles", href: "#articles", current: false },
+  { name: "Works", href: "#works", current: false },
+  { name: "Tools", href: "#tools", current: false },
+  { name: "About", href: "#about", current: false },
 ];
 
 function classNames(...classes) {
@@ -47,13 +49,17 @@ export default function NavbarTwo() {
             <div className="relative flex h-16 items-center justify-between">
               <div className="flex items-center">
                 {/* Logo */}
-                <div className="flex-shrink-0">
-                  <img
-                    className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-                    alt="Your Company"
-                  />
-                </div>
+                <a href="#accueil">
+                  <div className="w-8 h-8">
+                    <StaticImage
+                      src="../../../../images/watermelon.png"
+                      alt="Icon website"
+                      placeholder="blurred"
+                      layout="constrained"
+                      style={{ width: "100%", height: "100%" }}
+                    />
+                  </div>
+                </a>
               </div>
               {/* Navigation */}
               <div className="hidden sm:flex items-center justify-end space-x-10">

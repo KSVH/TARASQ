@@ -17,7 +17,7 @@ const AnimatedElement = ({ children, animationClass }) => {
 
 export default function About() {
   return (
-    <div className="bg-gradient-to-b from-[rgba(254,199,215,0.5)] to-[rgba(159,103,255,0.5)] rounded-t-[65px]">
+    <div className="bg-gradient-to-b from-[rgba(254,199,215,0.5)] to-[rgba(159,103,255,0.5)] rounded-t-[65px]" id='about'>
       <div className="container mx-auto px-4 ">
         <AnimatedElement animationClass="animate__fadeIn">
           <h2 className="text-7xl font-medium text-secondary text-center py-10 md:py-20">Who i am ?</h2>
