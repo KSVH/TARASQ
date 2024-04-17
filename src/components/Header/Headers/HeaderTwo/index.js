@@ -17,15 +17,15 @@ const getRandomY = (vh) => {
 
 const StarrySky = () => {
   const [num, setNum] = useState(200);
-  const [vw, setVw] = useState(Math.max(document.documentElement.clientWidth, window.innerWidth || 0));
-  const [vh, setVh] = useState(Math.max(1000 || 0));
+  const [vw, setVw] = useState(0);
+  const [vh, setVh] = useState(0);
 
   useEffect(() => {
-    // Vérifie si document est disponible avant d'accéder à ses propriétés
-    if (typeof document !== 'undefined') {
-      setVw(Math.max(document.documentElement.clientWidth, window.innerWidth || 0));
-      setVh(Math.max(document.documentElement.clientHeight, window.innerHeight || 0));
-    }
+    // Définir vw et vh à l'intérieur du bloc useEffect
+    const vwValue = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
+    const vhValue = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+    setVw(vwValue);
+    setVh(vhValue);
 
     const starryNight = () => {
       anime({
@@ -78,7 +78,7 @@ const StarrySky = () => {
       anime.remove("#sky .star");
       anime.remove("#shootingstars .wish");
     };
-  }, [vw, vh]);
+  }, []); // Dépendances vides pour exécuter uniquement une fois lors du montage initial
 
   return (
     <div>
