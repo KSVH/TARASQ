@@ -26,9 +26,7 @@ export default function About() {
               <h2 className="text-white text-3xl">About</h2>
               <hr className="mb-5" />
               <p className="mb-10 text-white text-xl">
-                The best Lorem Ipsum Generator in all the sea! Heave this scurvy copyfiller fer yar next adventure and
-                cajol yar clients into walking the plank with ev'ry layout! Configure above, then get yer pirate
-                ipsum...own the high seas, arg!
+                Hello ! Moi c'est Camille et je suis développeuse web front-end, j'adore découvrir des nouvelles technologies et créer des nouvelles choses !
               </p>
             </div>
             <div className="flex flex-col justify-end items-end">

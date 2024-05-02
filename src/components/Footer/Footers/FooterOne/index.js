@@ -15,13 +15,8 @@ export default function FooterTwo() {
             </div>
             <div>
               <div className="flex justify-end items-center">
-                <div className="flex mr-3">
-                  <a href="/" className="text-paragraph font-medium">
-                    Mentions Légales
-                  </a>
-                </div>
                 <div>
-                  <a href="/">
+                  <a href="https://www.linkedin.com/in/camille-frau-636556194/">
                     <img src={icon} className="h-10 w-10" />
                   </a>
                 </div>

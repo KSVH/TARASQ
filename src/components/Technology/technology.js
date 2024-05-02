@@ -43,6 +43,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Gatsby</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Bibliothèque CSS</span>
           </div>
           <div className="w-full h-[300px] rounded-[32px] bg-secondary flex justify-center flex-col items-center mt-10">
             <div className="w-[200px] md:w-[150px] lg:w-[180px] h-[200px]">
@@ -55,6 +57,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Emotion</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Bibliothèque CSS in JS</span>
           </div>
         </div>
         <div className="technology-column move-down-up-animation">
@@ -69,6 +73,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Gatsby</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Framework React</span>
           </div>
           <div className="w-full h-[300px] rounded-[32px] bg-secondary flex justify-center flex-col items-center mt-10">
             <div className="w-[200px] md:w-[150px] lg:w-[180px] h-[200px]">
@@ -81,6 +87,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">React</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Framework Javascript</span>
           </div>
         </div>
         <div className="technology-column move-up-down-animation">
@@ -95,6 +103,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Tailwind</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Bibliothèque CSS</span>
           </div>
           <div className="w-full h-[300px] rounded-[32px] bg-secondary flex justify-center flex-col items-center mt-10">
             <div className="w-[200px] md:w-[150px] lg:w-[180px] h-[200px]">
@@ -107,6 +117,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Styled components</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Bibliothèque CSS in JS</span>
           </div>
         </div>
         <div className="technology-column move-down-up-animation">
@@ -121,6 +133,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Next JS</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Framework React</span>
           </div>
           <div className="w-full h-[300px] rounded-[32px] bg-secondary flex justify-center flex-col items-center mt-10">
             <div className="w-[200px] md:w-[150px] lg:w-[190px] h-[200px]">
@@ -133,6 +147,8 @@ export default function Technology() {
                 style={{ width: "100%", height: "100%" }}
               />
             </div>
+            <h4 className="text-center font-mono font-medium text-lg text-white mt-4">Figma</h4>
+            <span className="text-center font-mono font-medium text-lg text-white">Outil de maquettage</span>
           </div>
         </div>
       </div>
