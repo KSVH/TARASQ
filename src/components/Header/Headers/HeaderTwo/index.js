@@ -81,7 +81,7 @@ const StarrySky = () => {
   }, []); // Dépendances vides pour exécuter uniquement une fois lors du montage initial
 
   return (
-    <div>
+    <div id="accueil">
       <div
         id="App"
         className="bg-gradient-to-b from-purple-400 via-pink-400 to-pink-200 h-screen flex justify-center flex-col"
@@ -93,11 +93,13 @@ const StarrySky = () => {
         <p className="text-white text-2xl text-center py-10 z-50 animate__animated animate__backInRight">
           Découvrez l’univers Yuna Dream <br />à travers mon site internet
         </p>
-        <div className="flex justify-center">
-          <button className="text-secondary w-[200px] h-16 shadow-md bg-white rounded-full text-xl font-serif transition duration-300 ease-in-out transform hover:shadow-xl z-50 animate__animated animate__backInUp">
+        <a href="#discover">
+        <div className="flex justify-center cursor-pointer">
+          <button className="cursor-pointer text-secondary w-[200px] h-16 shadow-md bg-white rounded-full text-xl font-serif transition duration-300 ease-in-out transform hover:shadow-xl z-50 animate__animated animate__backInUp">
             Découvrir
           </button>
         </div>
+        </a>
         <svg id="sky">
           {[...Array(num)].map((x, y) => (
             <circle

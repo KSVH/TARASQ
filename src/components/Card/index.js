@@ -11,7 +11,7 @@ export default function Card({ data }) {
 
   return (
     <div className="bg-gradient-to-b from-pink-200 via-pink-400 to-purple-400 rounded-b-[65px]" id="articles">
-      <div className="container mx-auto px-4">
+      <div id="discover" className="container mx-auto px-4">
         <div className="flex justify-center w-full">
           <div className="grid sm:grid-cols-1 gap-32 md:grid-cols-2 lg:grid-cols-3 w-full">
             {posts.map((post, index) => (
